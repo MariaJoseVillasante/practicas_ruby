@@ -11,3 +11,4 @@ numero.times do |i|
 end
 
 print "\n"
+puts 5%4
