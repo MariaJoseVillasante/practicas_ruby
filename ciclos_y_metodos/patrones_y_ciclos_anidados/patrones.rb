@@ -1,9 +1,54 @@
-numero = ARGV[0].to_i + 1
+letra = ARGV[0];
 
-numero.times do |i|
-    i.times do |j|
-    print j+1
-    end
-    print "\n"
+if letra == "n"
+    puts "*****"
+    puts "*   *"
+    puts "*   *"
+    puts "*   *"
+    puts "*****"
+    
+elsif letra == "0"
+    puts "*****"
+    puts "  *  "
+    puts "  *   "
+    puts "  *  "
+    puts "*****"
+elsif letra == "z"
+    puts "*****"
+    puts "   *"
+    puts " *   "
+    puts "*  "
+    puts "*****"
+elsif letra == "x"
+    puts "*   *"
+    puts " * * "
+    puts "  *   "
+    puts " * *"
+    puts "*   *"
+elsif letra == "z"
+    puts "*   *"
+    puts " * * "
+    puts "  *   "
+    puts " * *"
+    puts "*   *"
+elsif letra == "0"
+    puts "*****"
+    puts "**  *"
+    puts "* * *"
+    puts "*  **"
+    puts "*****"
+elsif letra == "0"
+    puts "*   *"
+    puts " * * "
+    puts "  *   "
+    puts " * *"
+    puts "*   *"
+elsif letra == "0"
+    puts "   *"
+    puts "  * * "
+    puts " * * *"
+    puts "* * * *"
+    puts "   *   "
+else
+    
 end
-
