@@ -1,6 +1,13 @@
 letra = ARGV[0];
 
 if letra == "n"
+    letra.times do |i|
+        letra.times do |j|
+        print "*"
+        end
+        print "\n"
+    end
+    
     puts "*****"
     puts "*   *"
     puts "*   *"
