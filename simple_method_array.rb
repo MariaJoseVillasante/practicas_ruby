@@ -14,3 +14,6 @@ print arregloString
 arregloString.delete_at(2)
 print arregloString
 arregloString.shuffle! #Lo deja permanente con el !
+
+arregloInt.delete(rand(0..arregloInt.length))
+print arregloInt
