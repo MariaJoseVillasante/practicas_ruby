@@ -152,4 +152,4 @@ end
 #letra_z(5)
 #letra_x(5)
 #numero_cero(5)
-navidad(18)
+navidad(9)

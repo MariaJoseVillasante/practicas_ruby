@@ -12,7 +12,7 @@ minutos = [90,120,500,200,50,30,45,700]
 def scan_addicts(minutos)
     resultado= []
     minutos.each do |j|
-        if j>90
+        if j>=90
             resultado.push("mal")     
         else
             resultado.push("bien")
