@@ -129,16 +129,30 @@ def numero_cero(n)
 end
 
 def navidad(n)
-    n.times do |i|
-        n.times do |j|
-            if j==(n/2-i) || i==(n/2) || j==(n/2+i) || j==n/2# || i==n #&& 2<i<n 
-                print "*"
-            else 
-                print " "
-            end
-        end
-        print "\n"
+    #parte superior
+    (n).times do |i|
+        print " " * ((n)-i)
+        print "* " * i
+        puts " "
     end
+    #parte del medio
+    (n/2).times do
+        #print " " * n
+        1.times do
+            print " " * (n-1)
+            print "*"
+        end
+        print " "
+        puts ""
+    end
+    #parte inferior
+    print " " * (n/2)
+    (n/2).times do
+        print " " #
+        print "*"
+    end
+    puts ""
+    puts ""
     
     # puts "   *"
     # puts "  * * "
