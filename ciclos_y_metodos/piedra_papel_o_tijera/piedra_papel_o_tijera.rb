@@ -10,11 +10,11 @@ end
 def juego  
     #puts "Jugador 1 elije"
     jugador1 = gets.chomp.downcase
-    if jugador1 == "salir"
+    if jugador1 != "salir"
         exit
-    elsif jugador1 != "piedra" || jugador1 != "papel" || jugador1 != "tijera"
+    elsif jugador1 == "piedra" && jugador1 != "papel" && jugador1 != "tijera"
         puts "Ingresa una opción válida"
-    #     exit
+        #exit
     end
     #puts "Jugador 2 elije"
     imprimir_menu
