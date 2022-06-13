@@ -1,4 +1,4 @@
-#letra = ARGV[0];
+letra = ARGV[0];
 
 def letra_o(n)
     #Parte superior
@@ -161,9 +161,9 @@ def navidad(n)
     # puts "   *   "
 end
 
-#letra_o(5)
-#letra_i(3)
-#letra_z(5)
-#letra_x(5)
-#numero_cero(5)
-navidad(5)
+letra_o(n)
+letra_i(n)
+letra_z(n)
+letra_x(n)
+numero_cero(n)
+navidad(n)
