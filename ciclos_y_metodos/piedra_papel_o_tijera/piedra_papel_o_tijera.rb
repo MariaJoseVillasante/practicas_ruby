@@ -4,42 +4,34 @@ def imprimir_menu
     puts '2- Papel'
     puts '3- Tijera'
     puts 'Escribe "Salir" para terminar el programa'
-    puts 'Ingresa una opción: '
 end
-    
-def juego  
-    #puts "Jugador 1 elije"
-    jugador1 = gets.chomp.downcase
-    if jugador1 != "salir"
-        exit
-    elsif jugador1 == "piedra" && jugador1 != "papel" && jugador1 != "tijera"
-        puts "Ingresa una opción válida"
-        #exit
+def jugador(n)
+    opcion_jugador = gets.chomp.downcase
+    while opcion_jugador != 'piedra' && opcion_jugador != 'papel' && opcion_jugador != 'tijera' && opcion_jugador != 'salir'
+        puts "Ingresar una opción válida"
+        opcion_jugador = gets.chomp.downcase
+        if opcion_jugador == 'salir'
+            exit
+        end
     end
-    #puts "Jugador 2 elije"
-    imprimir_menu
-    jugador2 = gets.chomp.downcase
-    if jugador2 == "salir"
-        exit
-    end
-    #while jugador1 != 'salir' || jugador2  != 'salir'   
+    return opcion_jugador
+   puts "Jugador #{n} elegiste #{opcion_jugador}" 
+end
+def juego(jugador1,jugador2)  
     if jugador1 == jugador2
         puts "Empate"
     elsif jugador1 == "piedra" && jugador2 == "tijera" || jugador1 == "papel" && jugador2 == "piedra" || jugador1 == "tijera" && jugador2 == "papel" 
         puts "Gana el jugador 1"
     elsif jugador2 == "piedra" && jugador1 == "tijera" || jugador2 == "papel" && jugador1 == "piedra" || jugador2 == "tijera" && jugador1 == "papel"  
-        puts "Gana el jugador 2"# puts "imprimir_menu"
-    else
-        puts "Opción inválida"
-        #break
+        puts "Gana el jugador 2"
     end
-    # puts "Jugador 1 elije"
-    # jugador1 = gets.chomp.downcase
-    # puts "Jugador 2 elije"
-    # jugador2 = gets.chomp.downcase
-    # end
     puts "Gracias por jugar"
 end
 
 imprimir_menu
-juego
+puts "Jugador 1 escribe tu opción: "
+jugador1 = jugador(1)
+imprimir_menu
+puts "Jugador 2 escribe tu opción: "
+jugador2 = jugador(2)
+juego(jugador1,jugador2)
