@@ -1,15 +1,17 @@
 data = open('notas.data').readlines
-n = data.count
-info_alumno = []
+info_alumno = data.map {|x| x.split(',')}
+n = info_alumno.count
 mejores_notas = []
 n.times do |i|
-    info_alumno << data[i].split(',')
     5.times do |j|
         info_alumno[i][j] = info_alumno[i][j].to_i if j > 0
     end
-    mejores_notas.push([info_alumno[i][1],info_alumno[i][2],info_alumno[i][3]].max)
-    #print info_alumno[i][0] + " "
-    #puts [info_alumno[i][1],info_alumno[i][2],info_alumno[i][3]].max
 end
-print mejores_notas
+def nota_mas_alta(arreglo_notas_nombre)
+    nota_mayor = ([arreglo_notas_nombre[1],arreglo_notas_nombre[2],arreglo_notas_nombre[3],arreglo_notas_nombre[4]].max)
+    nota_m = arreglo_notas_nombre.inject(0){|max,x| (arreglo_notas_nombre[x]).max}
+    print nota_m.class
+    return nota_mayor
+end
+print nota_mas_alta(info_alumno[1])
 
