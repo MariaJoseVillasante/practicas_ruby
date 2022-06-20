@@ -4,12 +4,18 @@ info_alumno = []
 mejores_notas = []
 n.times do |i|
     info_alumno << data[i].split(',')
-    5.times do |j|
-        info_alumno[i][j] = info_alumno[i][j].to_i if j > 0
+    n_interior = info_alumno[i].count
+    (1..n_interior).each do |j|
+        info_alumno[i][j] = info_alumno[i][j].to_i
     end
-    mejores_notas.push([info_alumno[i][1],info_alumno[i][2],info_alumno[i][3]].max)
-    #print info_alumno[i][0] + " "
-    #puts [info_alumno[i][1],info_alumno[i][2],info_alumno[i][3]].max
 end
-print mejores_notas
+def nota_mas_alta(arreglo)
+    notas = []
+    n = arreglo.length
+    (0..(n-1)).each do |i| 
+        notas[i] = arreglo[i].select{ |x| x.class == Integer}.max
+    end
+    print notas 
+end 
+nota_mas_alta(info_alumno)
 
