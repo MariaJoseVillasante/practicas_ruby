@@ -27,7 +27,7 @@ def build_web_page(hash)
 <ul>
 "
     photos.each do |photo|
-        html += "    <li><img scr=\"#{photo}\"></li>\n"
+        html += "    <li><img src=\"#{photo}\"></li>\n"
     end
     html += "</ul>
 </body>
